@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This is a script to initialize server apache
+
+sudo service apache2 start
+
