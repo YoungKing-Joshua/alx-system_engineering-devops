@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Configure your domain zone so that the subdomain 'www' points to your load-balancer IP
+
+#!/usr/bin/env bash
+
+# Function to retrieve DNS information
+DNS_info() {
+    local subdomain="$1"
+    local domain="$2"
+    local answer
+
+    answer=$(dig "$domain" | awk '/ANSWER SECTION:/ { getline; print $0 }')
+    if [[ -n "$answer" ]]; then
+        echo "The subdomain $subdomain is a $(echo "$answer" | awk '{print $4}') record and points to $(echo "$answer" | awk '{print $5}')"
+    else
+        echo "No record found for subdomain $subdomain"
+    fi
+}
+
+
+if [[ $# == 1 ]]; then
+    subdomains=("www" "lb-01" "web-01" "web-02")
+    for subdomain in "${subdomains[@]}"; do
+        full_domain="${subdomain}.${1}"
+        DNS_info "$subdomain" "$full_domain"
+    done
+elif [[ $# == 2 ]]; then
+    full_domain="${2}.${1}"
+    DNS_info "$2" "$full_domain"
+else
+    echo "Invalid number of arguments. Usage: $0 domain [subdomain]"
+fi
+
