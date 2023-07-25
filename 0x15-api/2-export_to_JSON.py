@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Script exports to-do list information for an employee's ID to JSON format."""
+"""Script exports to-do list information
+    for an employee's ID to JSON format."""
 
 import requests
 import json
 import sys
+
 
 def export_to_json(user_id):
     url = "https://jsonplaceholder.typicode.com/"
@@ -17,6 +19,7 @@ def export_to_json(user_id):
             "completed": task.get("completed"),
             "username": username
         } for task in todo_data]}, jsonfile)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2 or not sys.argv[1].isdigit():

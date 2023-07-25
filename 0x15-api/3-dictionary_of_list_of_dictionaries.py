@@ -4,6 +4,7 @@
 import json
 import requests
 
+
 def export_all_to_json():
     url = "https://jsonplaceholder.typicode.com/"
     users = requests.get(url + "users").json()
@@ -25,6 +26,7 @@ def export_all_to_json():
 
     with open("todo_all_employees.json", "w") as jsonfile:
         json.dump(all_tasks, jsonfile)
+
 
 if __name__ == "__main__":
     export_all_to_json()
