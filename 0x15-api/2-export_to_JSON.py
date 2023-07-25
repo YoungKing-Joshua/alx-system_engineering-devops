@@ -2,8 +2,8 @@
 """Script exports to-do list information
     for an employee's ID to JSON format."""
 
-import requests
 import json
+import requests
 import sys
 
 
