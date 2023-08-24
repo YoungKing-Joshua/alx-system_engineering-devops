@@ -17,16 +17,17 @@ def top_ten(subreddit):
 
     # Use allow_redirects=False to prevent following redirects
     res = requests.get(pathU, headers=htag, params=params,
-                            allow_redirects=False)
+                       allow_redirects=False)
 
     # Check for a 404 status code to handle invalid subreddits
     if res.status_code == 404:
         print("None")
         return
-    
+
     # Parse the JSON response and print the titles of the hottest posts
     results = res.json().get("data")
     [print(c.get("data").get("title")) for c in results.get("children")]
+
 
 # Test the function
 if __name__ == '__main__':
