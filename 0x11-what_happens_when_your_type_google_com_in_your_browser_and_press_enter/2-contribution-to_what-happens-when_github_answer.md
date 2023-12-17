@@ -1,6 +1,4 @@
-Certainly! Here's an example of content you can add to the "The 'g' key is pressed" section:
-
----
+https://intranet.alxswe.com/rltoken/Y6AFxnDhJBV4uz58gFOO4g
 
 ### The "g" key is pressed
 
