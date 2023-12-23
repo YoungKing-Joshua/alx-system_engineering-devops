@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Checking if the argument is provided in preios code
+# Run whoami command under the specified user
+
+sudo -u '$1' whoami
