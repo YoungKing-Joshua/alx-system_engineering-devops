@@ -6,4 +6,4 @@ chmod u+r /etc/nginx/nginx.conf
 # Killing apache from running on server
 pgrep apache2 > /dev/null && service apache2 stop
 # Start Nginx
-service nginx start
+sudo -u nginx service nginx start
