@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Update Nginx configuration
+# Updatingkill Nginx configuration
 sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 chmod u+r /etc/nginx/nginx.conf
-# Killing apache from running on server
 pkill -9 apache
-# Start Nginx
 sudo -u nginx service nginx start
