@@ -6,3 +6,4 @@ sed -i "s/ipv6only=on/d" /etc/nginx/sites-available/default
 rm -f /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
+

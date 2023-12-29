@@ -1,4 +1,3 @@
-sed: can't read /etc/nginx/sites-available/default: No such file or directory
-ln: failed to create symbolic link '/etc/nginx/sites-enabled/default': No such file or directory
-nginx: unrecognized service
+ * Restarting nginx nginx
+   ...done.
 Nginx configured to listen on port 80 for all active IPv4 IPs.
