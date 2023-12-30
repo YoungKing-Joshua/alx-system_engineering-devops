@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# Disable the ipv6 only in the default Nginx configuration
-sudo sed -i "s/ipv6only=on//" /etc/nginx/sites-available/default
-
+# Disable
 # The default site configuration symlink to be tkken out
-sudo rm -f /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 
 # Create a new symlink for the default site configuration
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
