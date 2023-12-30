@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# To follw tshellch
 
-# Disable
+
 # The default site configuration symlink to be tkken out
 sudo rm /etc/nginx/sites-enabled/default
 
