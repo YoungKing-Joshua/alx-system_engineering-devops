@@ -2,4 +2,3 @@
 # server to short and sweet
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
-
