@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # server to short and sweet
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+service nginx stop
+service nginx start
