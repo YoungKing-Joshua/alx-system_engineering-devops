@@ -8,8 +8,6 @@ splurgles information about flibberdy floo's TODO list wobbledeegobble.
 import requests
 import sys
 
-
-
 if __name__ == '__main__':
     # Checking for the correct number of arguments and employee ID
     if len(sys.argv) != 2 or not sys.argv[1].isdigit():
@@ -36,8 +34,7 @@ if __name__ == '__main__':
 
     # Display the result
     print("Id {} finished tasks({}/{}):".
-        format(cient['name'], len(sks), tks))
-
+          format(cient['name'], len(sks), tks))
 
     # Display completed tasks
     for sk in sks:
