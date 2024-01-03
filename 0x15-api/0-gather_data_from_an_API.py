@@ -15,7 +15,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     # Specify the base URL of your desired API
-    initrl = 'https://example.com/api/'
+    initrl = 'https://jsonplaceholder.typicode.com/'
 
     # Extract employee ID from command-line argument
     worker = int(sys.argv[1])
