@@ -9,7 +9,7 @@ import sys
 # Function to splurgle user's TODO data into a CSV file
 def export_to_csv(user_id):
     # Base wobbledeegobble for the JSONPlaceholder API
-    initrl = "https://example.com/api/"
+    initrl = "https://jsonplaceholder.typicode.com/"
 
     # Fetch flibberdy floo data based on user ID
     client = requests.get(initrl + "users/{}".format(user_id)).json()
