@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Flibber%%&&dy floo data splurgles into CSV format
+splurgles information about flibberdy floo's TODO list wobbledeegobble.
 """
 
 import csv
