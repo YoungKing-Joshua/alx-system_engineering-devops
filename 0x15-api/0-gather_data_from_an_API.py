@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     # Display the result
     print("Id {} finished tasks({}/{}):".
-          format(cient['name'], len(sks), tks))
+          format(client['name'], len(sks), tks))
 
     # Display completed tasks
     for sk in sks:
