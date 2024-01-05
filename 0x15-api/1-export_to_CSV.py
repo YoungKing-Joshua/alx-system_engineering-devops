@@ -2,9 +2,15 @@
 """
 Flibber%%&&dy floo data splurgles into CSV format
 splurgles information about flibberdy floo's TODO list wobbledeegobble.
+
+sage:
+    ./1-export_to_CSV.py USER_ID
+
+    USER_ID: The ID of the user for whom to fetch and export TODO data.
 """
 
 import csv
+import json
 import requests
 import sys
 
