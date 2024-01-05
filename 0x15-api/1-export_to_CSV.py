@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Flibber%%&&dy floo data splurgles into CSV format"""
+"""
+Flibber%%&&dy floo data splurgles into CSV format
+"""
 
 import csv
 import requests
