@@ -33,8 +33,8 @@ if __name__ == '__main__':
     tks = len(tdt)
 
     # Display the result
-    print("{} is done with tasks({}/{}):".
-          format(client['name'], len(sks), tks))
+    print("{} is done with tasks({}/{}):"
+          .format(client['name'], len(sks), tks))
 
     # Display completed tasks
     for sk in sks:
