@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Fixes a web server to run Nginx as the nginx user listening on port 8080.
+
+# Check if the Nginx configuration files exist
+if [ -e /etc/nginx/nginx.conf ] && [ -e /etc/nginx/sites-available/default ]; then
+  # Update Nginx configuration with sudo
+  sudo sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+  sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+  sudo chmod u+r /etc/nginx/nginx.conf
+
+  # Stop Apache if it's running
+  if pgrep apache2 > /dev/null; then
+    sudo service apache2 stop
+  fi
+
+  # Start Nginx (without specifying user, assuming nginx is the default)
+  sudo service nginx start
+else
+  echo "Error: Nginx configuration files not found."
+fi
+
